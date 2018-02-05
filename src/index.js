@@ -4,6 +4,7 @@ import Icon from './icon.png'
 import xmlData from './data.xml'
 console.log(xmlData)
 
+import printMe from './print.js'
 
 function component() {
 	var element = document.createElement('div');
@@ -16,7 +17,12 @@ function component() {
 
 	myIcon.src = Icon
 
+	var btn = document.createElement('button')
+	btn.innerHTML = 'click me'
+	btn.onclick = printMe
+
 	element.appendChild(myIcon)
+	element.appendChild(btn)
 
 	return element;
 }
